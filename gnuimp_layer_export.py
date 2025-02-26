@@ -9,6 +9,7 @@ if len(sys.argv) != 3:
 	sys.exit(-1)
 
 def make_safe_path(string):
+	# Regex from https://stackoverflow.com/a/71199182
 	return re.sub(r"[/\\?%*:|\"<>\x7F\x00-\x1F]", "-", string)
 
 infile = sys.argv[1]
